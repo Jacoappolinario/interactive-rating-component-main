@@ -1,0 +1,121 @@
+body {
+  margin: 0px;
+  background-color: #131518;
+  font-family: "Overpass", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+p,
+picture {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.feedback-form {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  width: 412px;
+  height: 416px;
+  border-radius: 1.875rem;
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1.88rem;
+}
+
+.feedback-image {
+  background: #262e38;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.44rem;
+}
+
+.feedback-description {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #969fad;
+  margin-bottom: 1.5rem;
+}
+
+.feedback-rating-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.feedback-rating-list button {
+  background: #262e38;
+  width: 51px;
+  height: 51px;
+  border: none;
+  border-radius: 50%;
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.0125rem;
+  color: #7c8798;
+  cursor: pointer;
+}
+
+.feedback-rating-list button:hover {
+  background: #7c8798;
+  color: #ffffff;
+}
+
+.feedback-rating-list button:active {
+  background: #fc7614;
+}
+
+.feedback-submit {
+  padding: 0.69rem;
+  background: #fc7614;
+  border-radius: 1.40625rem;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: 0.125rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+.feedback-submit:active {
+  background: #ffffff;
+  color: #fc7614;
+}
