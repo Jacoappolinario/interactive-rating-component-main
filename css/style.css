@@ -119,3 +119,52 @@ ul {
   background: #ffffff;
   color: #fc7614;
 }
+
+@media (max-width: 400px) {
+  .feedback-form {
+    width: 327px;
+    height: 360px;
+    border-radius: 0.9375rem;
+    padding: 1.5rem 1.5rem 2rem;
+    gap: 1rem;
+  }
+
+  .feedback-image {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feedback-image img {
+    width: 13.96px;
+    height: 13.33px;
+  }
+
+  .feedback-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.62rem;
+  }
+
+  .feedback-description {
+    font-size: 0.875rem;
+    line-height: 1.57;
+  }
+
+  .feedback-rating-list {
+    margin-bottom: 1.5rem;
+  }
+
+  .feedback-rating-list button {
+    width: 42px;
+    height: 42px;
+
+    font-size: 0.875rem;
+    line-height: 1.71;
+    letter-spacing: 0.01094rem;
+  }
+
+  .feedback-submit {
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    letter-spacing: 0.11669rem;
+  }
+}
