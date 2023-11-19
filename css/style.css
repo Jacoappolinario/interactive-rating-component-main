@@ -1,7 +1,17 @@
+:root {
+  --font-family: "Overpass", sans-serif;
+
+  --color-1: #131518;
+  --color-2: #ffffff;
+  --color-3: #969fad;
+  --color-4: #7c8798;
+  --color-5: #fc7614;
+}
+
 body {
   margin: 0px;
-  background-color: #131518;
-  font-family: "Overpass", sans-serif;
+  background-color: var(--color-1);
+  font-family: var(--font-family);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -25,7 +35,7 @@ ul {
   list-style: none;
 }
 
-.feedback-form {
+.rating-form {
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -41,7 +51,7 @@ ul {
   gap: 1.88rem;
 }
 
-.feedback-image {
+.rating-image {
   background: #262e38;
   width: 48px;
   height: 48px;
@@ -51,34 +61,34 @@ ul {
   justify-content: center;
 }
 
-.feedback-section {
+.rating-section {
   display: flex;
   flex-direction: column;
 }
 
-.feedback-heading {
+.rating-heading {
   font-size: 1.75rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--color-2);
   margin-bottom: 0.44rem;
 }
 
-.feedback-description {
+.rating-description {
   font-size: 0.9375rem;
   font-weight: 400;
   line-height: 1.6;
-  color: #969fad;
+  color: var(--color-3);
   margin-bottom: 1.5rem;
 }
 
-.feedback-rating-list {
+.rating-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 2rem;
 }
 
-.feedback-rating-list button {
+.rating-button {
   background: #262e38;
   width: 51px;
   height: 51px;
@@ -89,39 +99,40 @@ ul {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.0125rem;
-  color: #7c8798;
+  color: var(--color-4);
   cursor: pointer;
 }
 
-.feedback-rating-list button:hover {
-  background: #7c8798;
-  color: #ffffff;
+.rating-button:hover {
+  background: var(--color-4);
+  color: var(--color-2);
 }
 
-.feedback-rating-list button:active {
-  background: #fc7614;
+.rating-button.active {
+  background: var(--color-5);
+  color: var(--color-2);
 }
 
-.feedback-submit {
+.submit-button {
   padding: 0.69rem;
-  background: #fc7614;
+  background: var(--color-5);
   border-radius: 1.40625rem;
   font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: 0.125rem;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--color-2);
   border: none;
   cursor: pointer;
 }
 
-.feedback-submit:active {
-  background: #ffffff;
-  color: #fc7614;
+.submit-button:active {
+  background: var(--color-2);
+  color: var(--color-5);
 }
 
 @media (max-width: 500px) {
-  .feedback-form {
+  .rating-form {
     width: 327px;
     height: 360px;
     border-radius: 0.9375rem;
@@ -129,31 +140,31 @@ ul {
     gap: 1rem;
   }
 
-  .feedback-image {
+  .rating-image {
     width: 40px;
     height: 40px;
   }
 
-  .feedback-image img {
+  .rating-image img {
     width: 13.96px;
     height: 13.33px;
   }
 
-  .feedback-heading {
+  .rating-heading {
     font-size: 1.5rem;
     margin-bottom: 0.62rem;
   }
 
-  .feedback-description {
+  .rating-description {
     font-size: 0.875rem;
     line-height: 1.57;
   }
 
-  .feedback-rating-list {
+  .rating-list {
     margin-bottom: 1.5rem;
   }
 
-  .feedback-rating-list button {
+  .rating-button {
     width: 42px;
     height: 42px;
 
@@ -162,7 +173,7 @@ ul {
     letter-spacing: 0.01094rem;
   }
 
-  .feedback-submit {
+  .submit-button {
     padding: 0.75rem;
     font-size: 0.875rem;
     letter-spacing: 0.11669rem;
