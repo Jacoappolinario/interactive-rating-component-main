@@ -6,6 +6,7 @@
   --color-3: #969fad;
   --color-4: #7c8798;
   --color-5: #fc7614;
+  --color-6: #262e38;
 }
 
 body {
@@ -24,6 +25,7 @@ img {
 }
 
 h1,
+h2,
 p,
 picture {
   margin: 0px;
@@ -35,7 +37,7 @@ ul {
   list-style: none;
 }
 
-.rating-form {
+.container {
   background: radial-gradient(
     98.96% 98.96% at 50% 0%,
     #232a34 0%,
@@ -44,11 +46,19 @@ ul {
   width: 412px;
   height: 416px;
   border-radius: 1.875rem;
-  padding: 2rem;
   box-sizing: border-box;
+}
+
+/* Ranting Section */
+
+.rating-section {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 1.88rem;
+}
+
+.rating-section.hidden {
+  display: none;
 }
 
 .rating-image {
@@ -59,11 +69,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.rating-section {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 1.88rem;
 }
 
 .rating-heading {
@@ -124,6 +130,7 @@ ul {
   color: var(--color-2);
   border: none;
   cursor: pointer;
+  width: 100%;
 }
 
 .submit-button:active {
@@ -131,18 +138,68 @@ ul {
   color: var(--color-5);
 }
 
+/* Thank Section */
+
+.thank-section {
+  padding: 2.81rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.thank-section.hidden {
+  display: none;
+}
+
+.thank-image {
+  margin-bottom: 2rem;
+}
+
+.thank-rating-info .selected-rating-text {
+  background: var(--color-6);
+  padding: 0.25rem 1.25rem;
+  border-radius: 1.40625rem;
+  margin-bottom: 2rem;
+}
+
+.thank-rating-info .selected-rating-text,
+.thank-description {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-5);
+}
+
+.thank-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-2);
+  margin-bottom: 0.44rem;
+}
+
+.thank-description {
+  color: var(--color-3);
+  text-align: center;
+}
+
 @media (max-width: 500px) {
-  .rating-form {
+  .container {
     width: 327px;
     height: 360px;
     border-radius: 0.9375rem;
+  }
+
+  /* Ranting Section */
+
+  .rating-section {
     padding: 1.5rem 1.5rem 2rem;
-    gap: 1rem;
   }
 
   .rating-image {
     width: 40px;
     height: 40px;
+    margin-bottom: 1rem;
   }
 
   .rating-image img {
@@ -178,4 +235,9 @@ ul {
     font-size: 0.875rem;
     letter-spacing: 0.11669rem;
   }
+
+  /* Thank Section */
+
+  /* TODO: Criar media queries do Thank Section */
+  /* TODO: Refatorar esse arquivo CSS onde precisa */
 }
