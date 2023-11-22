@@ -237,7 +237,30 @@ ul {
   }
 
   /* Thank Section */
+  .thank-section {
+    padding: 2.12rem 1.5rem 2.31rem;
+  }
 
-  /* TODO: Criar media queries do Thank Section */
-  /* TODO: Refatorar esse arquivo CSS onde precisa */
+  .thank-image {
+    width: 144px;
+    height: 96px;
+    margin-bottom: 1.5rem;
+  }
+
+  .thank-rating-info .selected-rating-text {
+    padding: 0.31rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.57;
+    margin-bottom: 1.81rem;
+  }
+
+  .thank-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.63rem;
+  }
+
+  .thank-description {
+    font-size: 0.875rem;
+    line-height: 1.57;
+  }
 }
