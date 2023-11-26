@@ -13,7 +13,7 @@ function fakeFetch(url, { body, delayTime, simulateSuccess = true }) {
           }),
       };
 
-      simulateSuccess ? resolve(response) : reject(response);
+      resolve(response);
     }, delayTime);
   });
 }

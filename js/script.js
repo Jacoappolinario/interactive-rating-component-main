@@ -2,7 +2,6 @@ const form = document.querySelector(".rating-form");
 const ratingSection = document.querySelector(".rating-section");
 const thankSection = document.querySelector(".thank-section");
 const selectedRating = document.querySelector(".selected-rating");
-const container = document.querySelector(".container");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -20,17 +19,16 @@ form.addEventListener("submit", (event) => {
     fakeFetch("./enviar.php", {
       body: data,
       delayTime: 2000,
-      simulateSuccess: true,
-    })
-      .then((response) => {
-        if (response.ok) {
-          ratingSection.classList.add("hidden");
-          thankSection.classList.remove("hidden");
-          selectedRating.innerText = data.get("rating");
-        }
-      })
-      .catch((error) =>
-        console.error("Error in fictional form submission:", error)
-      );
+      simulateSuccess: false,
+    }).then((response) => {
+      if (response.ok) {
+        ratingSection.classList.add("hidden");
+        thankSection.classList.remove("hidden");
+
+        selectedRating.innerText = data.get("rating");
+      } else {
+        ratingSection.innerHTML = "<p>Error</p>";
+      }
+    });
   }
 });
