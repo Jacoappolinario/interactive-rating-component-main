@@ -20,7 +20,7 @@ form.addEventListener("submit", (event) => {
       method: "POST",
       body: data,
       delayTime: 2000,
-      simulateSuccess: false,
+      simulateSuccess: true,
     }).then((response) => {
       if (response.ok) {
         ratingSection.classList.add("hidden");
