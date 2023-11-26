@@ -1,0 +1,19 @@
+function fakeFetch(url, { body, delayTime, simulateSuccess = true }) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const response = {
+        ok: simulateSuccess,
+        status: simulateSuccess ? 200 : 500,
+        json: () =>
+          Promise.resolve({
+            status: simulateSuccess ? "success" : "error",
+            message: `Fictional submission ${
+              simulateSuccess ? "success" : "failed"
+            }`,
+          }),
+      };
+
+      simulateSuccess ? resolve(response) : reject(response);
+    }, delayTime);
+  });
+}

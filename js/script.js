@@ -1,43 +1,36 @@
-// TODO: Refazer toda essa lógica, levando em conta a nova estrutura html. Mas usar essa de exemplo.
-// const values = document.querySelectorAll(".rating-list .rating-button");
+const form = document.querySelector(".rating-form");
+const ratingSection = document.querySelector(".rating-section");
+const thankSection = document.querySelector(".thank-section");
+const selectedRating = document.querySelector(".selected-rating");
+const container = document.querySelector(".container");
 
-// values.forEach((value) => {
-//   value.addEventListener("click", (event) => {
-//     const selectedValue = event.currentTarget;
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
 
-//     selectedValue.classList.add("active");
+  const button = document.querySelector(".submit-button");
 
-//     values.forEach((value) => {
-//       if (value !== selectedValue) {
-//         value.classList.remove("active");
-//       }
-//     });
+  const data = new FormData(form);
 
-//     const hiddenField = document.getElementById("selectedValue");
+  if (!data.has("rating")) {
+    alert("Please select a rating before submitting the form");
+  } else {
+    button.disabled = true;
+    button.innerText = "Enviando...";
 
-//     hiddenField.value = +selectedValue.innerText;
-//   });
-// });
-
-// const form = document.querySelector(".rating-form");
-
-// form.addEventListener("submit", (event) => {
-//   event.preventDefault();
-
-//   const button = document.querySelector(".submit-button");
-//   button.disabled = true;
-//   button.innerText = "Enviando...";
-
-//   const data = new FormData(form);
-
-//   fetch("./enviar.php", {
-//     method: "POST",
-//     body: data,
-//   }).then((response) => {
-//     if (response.ok) {
-//       form.innerHTML = "<p>OK</p>";
-//     } else {
-//       form.innerHTML = "<p>Erro</p>";
-//     }
-//   });
-// });
+    fakeFetch("./enviar.php", {
+      body: data,
+      delayTime: 2000,
+      simulateSuccess: true,
+    })
+      .then((response) => {
+        if (response.ok) {
+          ratingSection.classList.add("hidden");
+          thankSection.classList.remove("hidden");
+          selectedRating.innerText = data.get("rating");
+        }
+      })
+      .catch((error) =>
+        console.error("Error in fictional form submission:", error)
+      );
+  }
+});
