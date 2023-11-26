@@ -28,6 +28,7 @@ form.addEventListener("submit", (event) => {
 
         selectedRating.innerText = data.get("rating");
       } else {
+        // TODO: Criar a pagina de error
         ratingSection.innerHTML = "<p>Error</p>";
       }
     });
