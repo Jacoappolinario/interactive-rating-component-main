@@ -17,6 +17,7 @@ form.addEventListener("submit", (event) => {
     button.innerText = "Enviando...";
 
     fakeFetch("./enviar.php", {
+      method: "POST",
       body: data,
       delayTime: 2000,
       simulateSuccess: false,

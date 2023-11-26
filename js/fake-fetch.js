@@ -1,4 +1,4 @@
-function fakeFetch(url, { body, delayTime, simulateSuccess = true }) {
+function fakeFetch(url, { method, body, delayTime, simulateSuccess = true }) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const response = {
