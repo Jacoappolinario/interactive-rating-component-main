@@ -1,0 +1,58 @@
+:root {
+  --font-family: "Overpass", sans-serif;
+
+  --color-1: #131518;
+  --color-2: #ffffff;
+  --color-3: #969fad;
+  --color-4: #7c8798;
+  --color-5: #fc7614;
+  --color-6: #262e38;
+}
+
+body {
+  margin: 0px;
+  background-color: var(--color-1);
+  font-family: var(--font-family);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+p,
+picture {
+  margin: 0px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.container {
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  width: 412px;
+  height: 416px;
+  border-radius: 1.875rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 327px;
+    height: 360px;
+    border-radius: 0.9375rem;
+  }
+}
