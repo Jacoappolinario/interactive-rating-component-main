@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Interactive rating component</title>
+  <meta name="description" content="Interactive rating component">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preload" href="./css/style.css" as="style">
   <link rel="stylesheet" href="./css/style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +20,7 @@
   <main>
     <div class="rating-section container">
       <picture class="rating-image">
-        <img src="./images/icon-star.svg" alt="Icon star">
+        <img src="./images/icon-star.svg" width="17" height="16" alt="Icon star">
       </picture>
 
       <h1 class="rating-heading">How did we do?</h1>
@@ -53,7 +56,7 @@
 
     <div class="thank-section container hidden">
       <picture class="thank-image">
-        <img src="./images/illustration-thank-you.svg" alt="Illustration thank you">
+        <img src="./images/illustration-thank-you.svg" width="162" height="108" alt="Illustration thank you">
       </picture>
 
       <div class="thank-rating-info">
@@ -65,7 +68,10 @@
         <p class="thank-description">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
       </div>
     </div>
-    <!-- TODO: Criar a pagina de error -->
+
+    <div class="error-section container hidden">
+      <p class="error-description">Oops! Something went wrong when submitting the rating. Please try again later.</p>
+    </div>
   </main>
   <script src="./js/fake-fetch.js"></script>
   <script src="./js/script.js"></script>

@@ -1,6 +1,7 @@
 const form = document.querySelector(".rating-form");
 const ratingSection = document.querySelector(".rating-section");
 const thankSection = document.querySelector(".thank-section");
+const errorSection = document.querySelector(".error-section");
 const selectedRating = document.querySelector(".selected-rating");
 
 form.addEventListener("submit", (event) => {
@@ -28,8 +29,8 @@ form.addEventListener("submit", (event) => {
 
         selectedRating.innerText = data.get("rating");
       } else {
-        // TODO: Criar a pagina de error
-        ratingSection.innerHTML = "<p>Error</p>";
+        ratingSection.classList.add("hidden");
+        errorSection.classList.remove("hidden");
       }
     });
   }
