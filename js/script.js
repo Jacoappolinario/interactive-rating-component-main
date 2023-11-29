@@ -15,7 +15,7 @@ form.addEventListener("submit", (event) => {
     alert("Please select a rating before submitting the form");
   } else {
     button.disabled = true;
-    button.innerText = "Enviando...";
+    button.innerText = "Sending...";
 
     fakeFetch("./enviar.php", {
       method: "POST",
